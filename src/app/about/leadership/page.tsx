@@ -33,7 +33,7 @@ export default function LeadershipPage() {
             <div className={`${wrap} grid gap-12 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:py-28 ${dark ? "" : "lg:[&>*:first-child]:order-2"}`}>
               {/* Monogram panel — no portrait photos have been supplied */}
               <Reveal>
-                <div className={`relative flex aspect-[4/5] items-end overflow-hidden p-8 ${dark ? "bg-ink" : "bg-ink text-white"}`}>
+                <div className={`relative flex aspect-[4/5] items-end overflow-hidden border border-white/14 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_24px_54px_-22px_rgba(0,0,0,0.65)] ${dark ? "bg-ink" : "bg-ink text-white"}`}>
                   <span aria-hidden className="display absolute right-4 top-2 text-[18rem] leading-none text-gold/15">
                     {l.name.split(" ").map((n) => n[0]).slice(0, 1)}
                   </span>

@@ -10,12 +10,18 @@ export interface Service {
   image: ImageKey;
 }
 
+export interface IndustryGalleryImage {
+  src: string;
+  alt: string;
+}
+
 export interface Industry {
   slug: string;
   name: string;
   short: string;
   blurb: string;
   image: ImageKey;
+  gallery: [IndustryGalleryImage, IndustryGalleryImage, IndustryGalleryImage];
   productSlugs: string[];
 }
 

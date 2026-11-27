@@ -1,8 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { company } from "@/data/company";
+
+const manrope = localFont({
+  src: "./fonts/manrope.woff2",
+  weight: "400 800",
+  variable: "--font-manrope",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
@@ -27,7 +35,7 @@ export const viewport: Viewport = { themeColor: "#0a0a0a", width: "device-width"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <body>
         <a
           href="#main"

@@ -1,27 +1,25 @@
-import HeroSection from "@/components/home/HeroSection";
-import TrustSection from "@/components/home/TrustSection";
-import WhatWeDoSection from "@/components/home/WhatWeDoSection";
-import ServicesSection from "@/components/home/ServicesSection";
-import SelectedWorkSection from "@/components/home/SelectedWorkSection";
-import DeliveryProcessSection from "@/components/home/DeliveryProcessSection";
-import IndustriesSection from "@/components/home/IndustriesSection";
-import WhyVPDSection from "@/components/home/WhyVPDSection";
-import ProductsSection from "@/components/home/ProductsSection";
-import FinalCTASection from "@/components/home/FinalCTASection";
+import HomeHero from "@/components/home/HomeHero";
+import HomeIntroSection from "@/components/home/HomeIntroSection";
+import HomeCapabilitiesSection from "@/components/home/HomeCapabilitiesSection";
+import HomeDeliverySection from "@/components/home/HomeDeliverySection";
+import HomeWhyVPDSection from "@/components/home/HomeWhyVPDSection";
+import HomeExperienceSection from "@/components/home/HomeExperienceSection";
+import HomeIndustriesSection from "@/components/home/HomeIndustriesSection";
+import HomeLeadershipSection from "@/components/home/HomeLeadershipSection";
+import HomeCTASection from "@/components/home/HomeCTASection";
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <TrustSection />
-      <WhatWeDoSection />
-      <ServicesSection />
-      <SelectedWorkSection />
-      <DeliveryProcessSection />
-      <IndustriesSection />
-      <WhyVPDSection />
-      <ProductsSection />
-      <FinalCTASection />
+      <HomeHero />
+      <HomeIntroSection />
+      <HomeCapabilitiesSection />
+      <HomeDeliverySection />
+      <HomeWhyVPDSection />
+      <HomeExperienceSection />
+      <HomeIndustriesSection />
+      <HomeLeadershipSection />
+      <HomeCTASection />
     </>
   );
 }

@@ -68,12 +68,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className={`${wrap} py-20 lg:py-28`}>
           <Eyebrow>How it&apos;s delivered</Eyebrow>
           <h2 className="display mt-6 max-w-3xl text-4xl sm:text-5xl">Every service follows the same seven-stage delivery.</h2>
-          <ol className="mt-12 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((p, i) => (
-              <li key={p.title} className="bg-ink p-6">
+              <li key={p.title} className="glass-surface p-6">
                 <span className="label text-gold">0{i + 1}</span>
                 <h3 className="mt-3 font-semibold">{p.title}</h3>
-                <p className="mt-1 text-sm text-white/60">{p.short}</p>
+                <p className="mt-1 text-sm text-white/65">{p.short}</p>
               </li>
             ))}
           </ol>

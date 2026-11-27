@@ -1,11 +1,11 @@
 import type { Product } from "@/types";
 
-const shot = (file: string) => `https://www.vpdtechnologies.com/images/projects/${file}`;
+const img = (file: string) => `/images/products/${file}`;
 
 /**
  * All 18 products/platforms listed on the live Products page, with their published status.
- * Descriptions and capability bullets are taken from that page. Screenshots are the preview
- * images already published on the live site.
+ * Descriptions and capability bullets are preserved from the existing site data;
+ * product visuals use the local portrait assets in /public/images/products/.
  */
 export const products: Product[] = [
   {
@@ -18,7 +18,7 @@ export const products: Product[] = [
       "A modern agricultural and supply management application designed to optimise farm-to-market workflows, inventory tracking and administrative operations.",
     capabilities: ["Farm crop harvest tracking", "Real-time mandi inventory ledger", "High-speed order routing APIs"],
     stack: ["React", "Node.js", "PostgreSQL", "Offline Sync"],
-    screenshot: shot("05-agriflow.webp"),
+    screenshot: img("05._AgriFlow_5a21ad55.png"),
   },
   {
     slug: "clikgett",
@@ -29,7 +29,7 @@ export const products: Product[] = [
     description: "A service and utility application focused on fast, seamless digital interactions and user convenience.",
     capabilities: ["Rapid on-demand service ordering", "Mobile-first quick task execution", "Lightweight real-time state synchronisation"],
     stack: ["Flutter", "Android", "React", "Node.js"],
-    screenshot: shot("08-clikgett.webp"),
+    screenshot: img("08._clikgett_de899caa.png"),
   },
   {
     slug: "pawguard",
@@ -40,7 +40,7 @@ export const products: Product[] = [
     description: "A pet care and management platform connecting pet owners, service providers and administrators in one digital environment.",
     capabilities: ["Public pet service booking", "Shelter operations management portal", "Unified cross-platform digital ecosystem"],
     stack: ["Python", "TypeScript", "Dart", "React"],
-    screenshot: shot("04-pawguard.webp"),
+    screenshot: img("04._PawGuard_665c70e2.png"),
   },
   {
     slug: "gatesphere",
@@ -51,7 +51,7 @@ export const products: Product[] = [
     description: "An access-control and security gateway management platform designed to secure digital and physical entry points.",
     capabilities: ["Multi-factor access control authentication", "Real-time perimeter entry telemetry", "Secure enterprise policy administration"],
     stack: ["TypeScript", "Modern Web", "Hardware APIs"],
-    screenshot: shot("06-gatesphere.webp"),
+    screenshot: img("06._GateSphere_86fecbee.png"),
   },
   {
     slug: "edunova-school",
@@ -62,7 +62,7 @@ export const products: Product[] = [
     description: "A comprehensive school and educational institution management system.",
     capabilities: ["Centralised student information records", "Curriculum and grading oversight", "Daily school attendance tracking"],
     stack: ["JavaScript", "Web Applications", "Database Systems"],
-    screenshot: shot("16-edunova-school.webp"),
+    screenshot: img("11._Aurexion_Technologies_3cd2500c.png"),
   },
   {
     slug: "medilink",
@@ -73,7 +73,7 @@ export const products: Product[] = [
     description: "A digital health management and patient care coordination platform connecting healthcare providers and users.",
     capabilities: ["Secure electronic medical records", "Automated clinical appointment scheduling", "Privacy-compliant health data workflows"],
     stack: ["TypeScript", "Scalable Web", "Health APIs"],
-    screenshot: shot("14-medilink.webp"),
+    screenshot: img("03._SevaNest_a8d73c24.png"),
   },
   {
     slug: "skyline-crest",
@@ -84,7 +84,7 @@ export const products: Product[] = [
     description: "An enterprise-grade workflow and data-processing backend designed for high-volume operational loads and secure communications.",
     capabilities: ["Automated high-volume data pipelines", "Direct enterprise architecture integration", "Encrypted cloud event logging"],
     stack: ["Python", "Web Frameworks", "Secure Storage"],
-    screenshot: shot("09-skyline-crest.webp"),
+    screenshot: img("07._CoralSwift_914d13e8.png"),
   },
   {
     slug: "finbridge",
@@ -95,7 +95,7 @@ export const products: Product[] = [
     description: "A fintech and asset-tracking platform designed to simplify digital finance management and user transactions.",
     capabilities: ["Real-time user financial dashboards", "Auditable digital transaction tracking", "Secure financial data connectors"],
     stack: ["JavaScript", "Supabase", "Python"],
-    screenshot: shot("10-finbridge.webp"),
+    screenshot: img("12._Amplivo_0d7679c9.png"),
   },
   {
     slug: "nexasphere",
@@ -106,7 +106,7 @@ export const products: Product[] = [
     description: "A scalable modular platform designed to unify enterprise services, system monitoring and cross-functional module communication.",
     capabilities: ["Centralised micro-component orchestration engine", "Real-time system health aggregation", "Modular enterprise administrative console"],
     stack: ["JavaScript", "Microservices", "Enterprise Web"],
-    screenshot: shot("11-nexasphere.webp"),
+    screenshot: img("09._NexaSphere_658e30d7.png"),
   },
   {
     slug: "nexforge-automation",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     description: "An automation engine designed to eliminate repetitive operational bottlenecks, manage background tasks and trigger intelligent workflows.",
     capabilities: ["High-throughput background task scheduling", "Bidirectional enterprise data synchronisation", "Automated intelligent trigger workflows"],
     stack: ["Python", "Automation Engine", "Web Services"],
-    screenshot: shot("12-nexforge-automation.webp"),
+    screenshot: img("10._NexForge_Automation_3ca2f456.png"),
   },
   {
     slug: "aurexion-technologies",
@@ -128,7 +128,7 @@ export const products: Product[] = [
     description: "A technology framework and digital portal designed to deliver high-performance enterprise web experiences and modular services.",
     capabilities: ["Decoupled enterprise portal architecture", "Optimised client data caching", "Responsive high-performance web delivery"],
     stack: ["TypeScript", "Modern Web", "Responsive UI"],
-    screenshot: shot("13-aurexion-technologies.webp"),
+    screenshot: img("11._Aurexion_Technologies_3cd2500c.png"),
   },
   {
     slug: "amplivo",
@@ -139,7 +139,7 @@ export const products: Product[] = [
     description: "An enterprise business management and scaling platform designed to optimise operational workflows.",
     capabilities: ["Streamlined multi-department organisational workflows", "Executive real-time KPI dashboards", "Continuous enterprise performance analytics"],
     stack: ["TypeScript", "Full-Stack", "Analytical Tools"],
-    screenshot: shot("15-amplivo.webp"),
+    screenshot: img("12._Amplivo_0d7679c9.png"),
   },
   {
     slug: "nexacargo",
@@ -150,7 +150,7 @@ export const products: Product[] = [
     description: "A logistics, freight and cargo tracking platform designed for supply-chain monitoring.",
     capabilities: ["Real-time freight shipment tracking", "Transit route status verification", "Consolidated logistics fleet dispatch"],
     stack: ["TypeScript", "Web Technologies", "Tracking Modules"],
-    screenshot: shot("17-nexacargo.webp"),
+    screenshot: img("13._Nexacargo_f1d07bcc.png"),
   },
   {
     slug: "finovara-ca",
@@ -161,7 +161,7 @@ export const products: Product[] = [
     description: "A financial, tax and chartered-accounting advisory management tool.",
     capabilities: ["Automated financial ledger analysis", "Client statutory compliance tracking", "Structured chartered accounting workflows"],
     stack: ["Python", "Secure Web Stack", "Compliance Backend"],
-    screenshot: shot("18-finovara-ca.webp"),
+    screenshot: img("14._Finovara_CA_b8a167e0.png"),
   },
   {
     slug: "corefusion-technologies",
@@ -172,7 +172,7 @@ export const products: Product[] = [
     description: "A core technology framework providing foundational modules for enterprise software.",
     capabilities: ["Standardised enterprise architecture blueprints", "Foundational shared service APIs", "Modular distributed web frameworks"],
     stack: ["JavaScript", "Enterprise Frontend", "Distributed Backend"],
-    screenshot: shot("19-corefusion-technologies.webp"),
+    screenshot: img("15._CoreFusion_Technologies_f601bc7c.png"),
   },
   {
     slug: "fieldops-nexus",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     description: "An intelligent field service and operational management platform designed to optimise workforce deployment, task tracking and real-time field coordination.",
     capabilities: ["Real-time field workforce dispatch", "Automated operational task tracking", "Secure field telemetry processing"],
     stack: ["Python", "FastAPI", "Internal Tooling"],
-    screenshot: shot("01-fieldops-nexus.webp"),
+    screenshot: img("01._FieldOps_Nexus_193dddf5.png"),
   },
   {
     slug: "procuresphere-360",
@@ -194,7 +194,7 @@ export const products: Product[] = [
     description: "A comprehensive procurement and supply chain management suite engineered to digitise, monitor and streamline end-to-end sourcing workflows.",
     capabilities: ["Automated purchase requisition tracking", "Centralised vendor compliance management", "Scalable Python backend infrastructure"],
     stack: ["Python", "PostgreSQL", "Enterprise Core"],
-    screenshot: shot("02-procuresphere-360.webp"),
+    screenshot: img("02._ProcureSphere_360_3c677ff5.png"),
   },
   {
     slug: "sevanest",
@@ -205,7 +205,7 @@ export const products: Product[] = [
     description: "A cross-platform service ecosystem connecting users with professional service providers through dedicated mobile and administrative interfaces.",
     capabilities: ["Dedicated client mobile application", "Worker field dispatch interface", "Centralised administrative web dashboard"],
     stack: ["Flutter", "Dart", "Web Admin"],
-    screenshot: shot("03-sevanest.webp"),
+    screenshot: img("18._SevaNest_903c440b.png"),
   },
 ];
 

@@ -38,7 +38,7 @@ export default function ImmersiveNavigation({ open, onClose }: Props) {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-0 z-[60] overflow-y-auto bg-ink text-white"
+          className="fixed inset-0 z-[60] overflow-y-auto bg-ink/95 text-white backdrop-blur-2xl"
           initial={reduce ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
           animate={reduce ? { opacity: 1 } : { clipPath: "inset(0 0 0% 0)" }}
           exit={reduce ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
@@ -50,7 +50,7 @@ export default function ImmersiveNavigation({ open, onClose }: Props) {
               <button
                 ref={closeRef}
                 onClick={onClose}
-                className="flex items-center gap-2 border border-white/25 px-4 py-2.5 text-sm font-semibold transition-colors hover:border-gold hover:text-gold"
+                className="gloss-ghost flex items-center gap-2 border border-white/20 px-4 py-2.5 text-sm font-semibold transition-all hover:border-gold hover:bg-white/12 hover:text-gold"
               >
                 Close <X className="h-4 w-4" aria-hidden />
               </button>
@@ -109,7 +109,7 @@ export default function ImmersiveNavigation({ open, onClose }: Props) {
                   <Link
                     href="/contact"
                     onClick={onClose}
-                    className="group inline-flex items-center gap-3 bg-gold px-6 py-4 text-sm font-semibold text-ink transition-colors hover:bg-white"
+                    className="gloss-gold group inline-flex items-center gap-3 bg-gold px-6 py-4 text-sm font-semibold text-ink transition-all hover:bg-white"
                   >
                     Start a conversation
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden />

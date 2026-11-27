@@ -39,7 +39,7 @@ export default function ServiceShowcase({ service: s, index, variant, flip }: Pr
             {/* Capabilities: always visible on touch / small screens, revealed on hover for large screens */}
             <ul className={`mt-6 flex flex-wrap gap-2 transition-all duration-500 lg:max-h-0 lg:translate-y-4 lg:opacity-0 lg:group-hover:max-h-40 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-visible:max-h-40 lg:group-focus-visible:translate-y-0 lg:group-focus-visible:opacity-100 ${right ? "justify-end" : ""}`}>
               {s.capabilities.map((c) => (
-                <li key={c} className="border border-white/30 bg-ink/40 px-3 py-1.5 text-xs text-white backdrop-blur-sm">{c}</li>
+                <li key={c} className="glass-surface px-3 py-1.5 text-xs text-white">{c}</li>
               ))}
             </ul>
 
@@ -65,7 +65,7 @@ export default function ServiceShowcase({ service: s, index, variant, flip }: Pr
               sizes="(min-width:1024px) 55vw, 100vw"
               className="transition-transform duration-[1200ms] group-hover:scale-105"
             />
-            <span className="label absolute left-5 top-5 bg-ink px-3 py-1.5 text-gold">{num}</span>
+            <span className="glass-surface-deep label absolute left-5 top-5 px-3 py-1.5 text-gold">{num}</span>
           </ImageReveal>
         </Link>
         <Reveal className={flip ? "lg:order-1" : ""}>

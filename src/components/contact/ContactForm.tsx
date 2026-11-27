@@ -68,7 +68,7 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div role="status" className="flex h-full flex-col justify-center border border-gold/40 bg-white p-8 text-ink sm:p-12">
+      <div role="status" className="glass-light flex h-full flex-col justify-center border border-gold/45 p-8 text-ink sm:p-12">
         <CheckCircle2 className="h-10 w-10 text-gold-deep" aria-hidden />
         <h2 className="display mt-6 text-4xl">Thanks, {v.name.split(" ")[0]}.</h2>
         <p className="mt-4 text-ink/70">
@@ -85,14 +85,14 @@ export default function ContactForm() {
     );
   }
 
-  const base = "mt-2 w-full border bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors focus:border-gold-deep";
+  const base = "mt-2 w-full border bg-white/85 px-4 py-3.5 text-sm text-ink shadow-[inset_0_1px_2px_rgba(7,9,15,0.06)] outline-none backdrop-blur-sm transition-all focus:border-gold-deep focus:bg-white";
   const cls = (k: keyof Values) => `${base} ${errors[k] ? "border-red-600" : "border-ink/25"}`;
   const err = (k: keyof Values) =>
     errors[k] ? <p id={`${k}-err`} className="mt-1.5 text-xs text-red-700">{errors[k]}</p> : null;
   const aria = (k: keyof Values) => ({ "aria-invalid": Boolean(errors[k]), "aria-describedby": errors[k] ? `${k}-err` : undefined });
 
   return (
-    <form noValidate onSubmit={onSubmit} className="grid gap-5 bg-white p-6 text-ink sm:grid-cols-2 sm:p-10">
+    <form noValidate onSubmit={onSubmit} className="glass-light grid gap-5 p-6 text-ink sm:grid-cols-2 sm:p-10">
       <div>
         <label htmlFor="name" className="text-sm font-medium">Full name *</label>
         <input id="name" autoComplete="name" value={v.name} onChange={set("name")} className={cls("name")} {...aria("name")} />
@@ -131,7 +131,7 @@ export default function ContactForm() {
         {err("message")}
       </div>
       <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
-        <button type="submit" disabled={busy} className="bg-ink px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold hover:text-ink disabled:opacity-60">
+        <button type="submit" disabled={busy} className="gloss-dark bg-ink px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-gold hover:text-ink disabled:opacity-60">
           {busy ? "Sending…" : "Submit enquiry"}
         </button>
         <p className="text-xs text-ink/50">NDA available on request.</p>

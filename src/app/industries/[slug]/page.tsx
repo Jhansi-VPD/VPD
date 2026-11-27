@@ -57,7 +57,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                 <Link href={`/products/${p.slug}`} className="group block">
                   <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
                     <Photo src={p.screenshot} alt={`${p.name} product preview`} sizes="(min-width:1024px) 30vw, 100vw" className="transition-transform duration-700 group-hover:scale-105" />
-                    <span className="label absolute left-4 top-4 bg-ink px-3 py-1.5 text-gold">{p.status}</span>
+                    <span className="glass-surface-deep label absolute left-4 top-4 px-3 py-1.5 text-gold">{p.status}</span>
                   </div>
                   <h3 className="display mt-5 text-3xl group-hover:text-gold-deep">{p.name}</h3>
                   <p className="mt-2 text-ink/65">{p.tagline}</p>
@@ -77,7 +77,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           <ul className="mt-6 flex flex-wrap gap-3">
             {services.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="block border border-white/20 px-4 py-2.5 text-sm transition-colors hover:border-gold hover:text-gold">
+                <Link href={`/services/${s.slug}`} className="glass-surface block px-4 py-2.5 text-sm transition-all hover:border-gold hover:bg-white/12 hover:text-gold">
                   {s.title}
                 </Link>
               </li>

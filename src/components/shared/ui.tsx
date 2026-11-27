@@ -21,10 +21,10 @@ interface ButtonProps {
 }
 
 const styles = {
-  gold: "bg-gold text-ink hover:bg-white",
-  ghost: "border border-white/30 text-white hover:border-gold hover:text-gold",
-  dark: "bg-ink text-white hover:bg-gold hover:text-ink",
-  "ghost-dark": "border border-ink/25 text-ink hover:border-gold-deep hover:text-gold-deep",
+  gold: "bg-gold text-ink gloss-gold hover:bg-white hover:shadow-[0_14px_34px_-10px_rgba(255,255,255,0.35)]",
+  ghost: "gloss-ghost border border-white/25 text-white hover:border-gold hover:bg-white/12 hover:text-gold",
+  dark: "bg-ink text-white gloss-dark hover:bg-gold hover:text-ink",
+  "ghost-dark": "border border-ink/20 bg-white/65 backdrop-blur-sm text-ink shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] hover:border-gold-deep hover:bg-white hover:text-gold-deep",
 };
 
 export function ButtonLink({ href, children, variant = "gold", external, className = "" }: ButtonProps) {

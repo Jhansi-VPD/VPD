@@ -49,7 +49,7 @@ function ApplyForm({ job }: { job: Job }) {
         onChange={(e) => setV({ ...v, [k]: e.target.value })}
         aria-invalid={Boolean(errors[k])}
         aria-describedby={errors[k] ? `${job.id}-${k}-err` : undefined}
-        className="mt-1.5 w-full border border-ink/25 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gold-deep"
+        className="mt-1.5 w-full border border-ink/20 bg-white/85 px-4 py-3 text-sm shadow-[inset_0_1px_2px_rgba(7,9,15,0.06)] outline-none backdrop-blur-sm transition-all focus:border-gold-deep focus:bg-white"
       />
       {errors[k] && <p id={`${job.id}-${k}-err`} className="mt-1 text-xs text-red-700">{errors[k]}</p>}
     </div>
@@ -70,7 +70,7 @@ function ApplyForm({ job }: { job: Job }) {
       {field("email", "Email", "email", "email")}
       {field("phone", "Phone", "tel", "tel")}
       <div className="flex flex-wrap items-center gap-4 sm:col-span-3">
-        <button type="submit" className="bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold hover:text-ink">
+        <button type="submit" className="gloss-dark bg-ink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-gold hover:text-ink">
           Submit interest
         </button>
         <a href={mailto} className="text-sm font-semibold underline underline-offset-4 hover:text-gold-deep">Or email your resume</a>
@@ -94,7 +94,7 @@ export default function JobList({ jobs }: { jobs: Job[] }) {
             key={d}
             onClick={() => setDept(d)}
             aria-pressed={dept === d}
-            className={`border px-4 py-2 text-sm transition-colors ${dept === d ? "border-gold bg-gold text-ink" : "border-ink/20 hover:border-gold-deep"}`}
+            className={`border px-4 py-2 text-sm transition-all ${dept === d ? "gloss-gold border-gold bg-gold text-ink" : "glass-light border-ink/15 hover:border-gold-deep"}`}
           >
             {d}
           </button>
@@ -146,7 +146,7 @@ export default function JobList({ jobs }: { jobs: Job[] }) {
                           <dt className="text-ink/55">Posted</dt><dd>{j.posted}</dd>
                         </dl>
                       </div>
-                      <div className="bg-bone p-6">
+                      <div className="glass-light p-6">
                         <p className="label text-gold-deep">Apply</p>
                         <p className="mb-5 mt-2 text-sm text-ink/65">Share your details, or email your resume to {company.email}.</p>
                         <ApplyForm job={j} />

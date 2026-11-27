@@ -42,7 +42,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <p className="mt-6 max-w-2xl text-xl text-white/75">{p.tagline}</p>
         </div>
         <div className={`${wrap} mt-14`}>
-          <div className="relative aspect-[16/9] overflow-hidden border border-white/10 bg-charcoal">
+          <div className="relative aspect-[16/9] overflow-hidden border border-white/15 bg-charcoal shadow-[0_28px_64px_-22px_rgba(0,0,0,0.8)]">
             <Photo src={p.screenshot} alt={`${p.name} product preview`} priority sizes="(min-width:1440px) 1300px, 100vw" />
           </div>
           <p className="mt-3 text-xs text-white/40">Preview image as published on the existing VPD website.</p>
@@ -57,7 +57,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <p className="label mt-10 text-gold-deep">Built with</p>
             <ul className="mt-4 flex flex-wrap gap-2">
               {p.stack.map((t) => (
-                <li key={t} className="border border-ink/20 px-3 py-1.5 text-sm">{t}</li>
+                <li key={t} className="glass-light px-3 py-1.5 text-sm">{t}</li>
               ))}
             </ul>
           </Reveal>

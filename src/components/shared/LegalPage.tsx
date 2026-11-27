@@ -14,7 +14,7 @@ export default function LegalPage({ title, intro, sections, liveUrl }: { title: 
       </section>
       <section className="bg-white text-ink">
         <div className={`${wrap} max-w-4xl py-16 lg:py-24`}>
-          <p className="mb-12 border border-gold/50 bg-gold/10 p-4 text-sm">
+          <p className="mb-12 border border-gold/45 bg-gold/12 p-4 text-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-sm">
             This page is a plain-language summary. The full approved wording is published at{" "}
             <a href={liveUrl} className="font-semibold underline" target="_blank" rel="noopener noreferrer">{liveUrl.replace("https://", "")}</a>
             ; it should be copied here before launch.

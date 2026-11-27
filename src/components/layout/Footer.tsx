@@ -7,7 +7,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink text-white">
+    <footer className="border-t border-white/15 bg-ink text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
       <div className={`${wrap} grid gap-12 py-16 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:py-20`}>
         <div className="max-w-sm">
           <Logo />

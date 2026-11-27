@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { services } from "@/data/services";
 import PageHero from "@/components/shared/PageHero";
+import DynamicServiceGallery from "@/components/services/DynamicServiceGallery";
 import ServiceShowcase from "@/components/services/ServiceShowcase";
-import { ButtonLink, wrap } from "@/components/shared/ui";
+import { ButtonLink, Eyebrow, wrap } from "@/components/shared/ui";
 import { img } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -46,6 +47,23 @@ export default function ServicesPage() {
           ))}
         </ul>
       </nav>
+
+      <section aria-label="Interactive services overview" className="bg-ink text-white">
+        <div className={`${wrap} py-16 lg:py-24`}>
+          <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <Eyebrow>Capability matrix</Eyebrow>
+              <h2 className="display mt-4 text-3xl sm:text-4xl lg:text-5xl">
+                Seven disciplines. One cohesive architecture.
+              </h2>
+            </div>
+            <p className="text-xs tracking-[0.16em] uppercase text-white/55">
+              Hover or focus a tile to expand · Click to explore
+            </p>
+          </div>
+          <DynamicServiceGallery />
+        </div>
+      </section>
 
       {services.map((s, i) => (
         <div key={s.slug} id={s.slug} className="scroll-mt-16">
